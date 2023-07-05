@@ -27,7 +27,8 @@ function game()
     let playerScore = 0;
     for( let i =0 ; i<5;i++){
         let computerSelection = getComputerChoice();
-        let playerSelection = prompt("enter your weapon rock , paper or sissors");
+        let player = prompt("enter your weapon rock , paper or sissors");
+        let playerSelection = player.toLowerCase();
         let result = playRound(computerSelection,playerSelection);
         console.log(result);
         if(result.startsWith("you lose! ")){
